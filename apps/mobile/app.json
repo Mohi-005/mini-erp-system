@@ -1,0 +1,10 @@
+{
+  "expo": {
+    "name": "Mini ERP Preview",
+    "slug": "mini-erp-preview",
+    "scheme": "minierp",
+    "version": "0.1.0",
+    "userInterfaceStyle": "light",
+    "android": { "package": "com.minierp.preview" }
+  }
+}

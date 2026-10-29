@@ -1,0 +1,38 @@
+{
+  "name": "mini-erp",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "engines": {
+    "node": ">=22.13.0"
+  },
+  "scripts": {
+    "dev": "npm run dev --workspace @mini-erp/web",
+    "android": "npm run android --workspace @mini-erp/mobile",
+    "mobile": "npm run start --workspace @mini-erp/mobile",
+    "build": "npm run build --workspace @mini-erp/web",
+    "build:android": "npm run export:android --workspace @mini-erp/mobile",
+    "typecheck": "npm run typecheck --workspaces --if-present",
+    "lint": "eslint .",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "test": "node --experimental-strip-types --test packages/shared/tests/*.test.ts",
+    "check": "npm run format:check && npm run lint && npm run typecheck && npm test && npm run build && npm run build:android"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "@types/node": "^24.19.2",
+    "@types/react": "~19.2.0",
+    "eslint": "^10.13.0",
+    "eslint-plugin-react-hooks": "^7.0.0",
+    "globals": "^17.13.0",
+    "prettier": "^3.6.2",
+    "supabase": "^2.121.0",
+    "typescript": "~5.9.2",
+    "typescript-eslint": "^8.46.0"
+  }
+}

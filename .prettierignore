@@ -1,0 +1,9 @@
+node_modules
+dist
+.expo
+package-lock.json
+references
+docs/reference
+artifacts
+supabase/.temp
+supabase/.branches

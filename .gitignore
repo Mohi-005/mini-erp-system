@@ -1,0 +1,12 @@
+node_modules/
+dist/
+.expo/
+.env
+.env.*
+!.env.example
+*.tsbuildinfo
+coverage/
+references/extracted/
+artifacts/
+!docs/reference/version3/dist/
+!docs/reference/version3/dist/**

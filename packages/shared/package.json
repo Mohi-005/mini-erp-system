@@ -1,0 +1,21 @@
+{
+  "name": "@mini-erp/shared",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts",
+    "./demo": "./src/demo.ts",
+    "./auth": "./src/auth.ts",
+    "./master-data": "./src/master-data.ts",
+    "./master-data-service": "./src/master-data-service.ts",
+    "./database-types": "./src/database.types.ts",
+    "./sales": "./src/sales.ts"
+  },
+  "scripts": {
+    "typecheck": "tsc -p tsconfig.json"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.118.0"
+  }
+}

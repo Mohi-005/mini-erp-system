@@ -1,0 +1,3 @@
+# Migrations reserved
+
+Historical placeholder only: no SQL or runner lives here. Phase 2A establishes **`supabase/migrations/` as the sole canonical migration history**, with local config and pgTAP tests under `supabase/`. This README is retained as history, not a second migration system. No operational seed or Edge Function is needed. Migration 20261019000100 is applied to authorized hosted DEV; lint and 55/55 SQL security assertions passed without local Docker. Local clean reset/rebuild remains unavailable. Never run migrations from clients or mix sample fixtures with live records. See docs/phase2a.md for exact evidence and remaining email/native limitations.

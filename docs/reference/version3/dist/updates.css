@@ -1,0 +1,30 @@
+/* Document scroll owns the page; bounded panels scroll only when content overflows. */
+html{height:auto;min-height:100%;overflow:auto;touch-action:auto;scroll-padding-block:20px}
+body{height:auto;min-height:100vh;overflow:visible;touch-action:auto}
+#app{display:grid;grid-template-columns:232px minmax(0,1fr);align-items:start;min-height:100vh}
+.sidebar{position:sticky;inset:auto;top:0;width:auto;height:100vh;height:100dvh;overflow:auto;touch-action:auto;scrollbar-gutter:stable}
+.sidebar>*{flex-shrink:0}.sidebar footer{padding-bottom:12px}
+.workspace{margin-left:0;min-width:0}.main{width:100%;min-width:0;height:auto;overflow:visible}
+.topbar{min-height:80px;height:auto;padding-block:15px;flex-wrap:wrap}.topactions{flex-wrap:wrap}
+.pagehead,.panelhead{flex-wrap:wrap}.pagehead>div{min-width:0}.wrap{flex-wrap:wrap}
+.welcome{overflow:visible}.welcome:after{display:none}
+.grid,.pos,.estimate{grid-template-columns:minmax(0,1.65fr) minmax(0,1fr)}
+.pos>section,.grid>section,.estimate>section{min-width:0}
+.metrics{grid-template-columns:repeat(4,minmax(0,1fr))}
+.metric strong,.estimate-result strong.big{overflow-wrap:anywhere}
+.tablewrap{width:100%;max-width:100%;overflow:auto;touch-action:auto;-webkit-overflow-scrolling:touch;scrollbar-gutter:stable;outline-offset:2px}
+.tablewrap:focus-visible{outline:2px solid var(--green)}
+.tablewrap table{min-width:580px}
+dialog{margin:auto;max-width:calc(100vw - 24px);max-height:calc(100vh - 24px);max-height:calc(100dvh - 24px);overflow:auto;touch-action:auto;scrollbar-gutter:stable}
+dialog .close{position:sticky;top:0;background:white;z-index:1;min-width:40px;min-height:40px;border-radius:6px}
+.shop-name{display:inline-flex;align-items:center;gap:12px;min-height:44px;font-weight:700;color:var(--green);text-align:left;padding:4px 0;white-space:normal;overflow-wrap:anywhere}
+.shop-name svg{width:16px}.shop-details{display:grid;grid-template-columns:1fr 1.5fr;gap:13px 16px;margin:25px 0}
+.shop-details dt{color:var(--muted)}.shop-details dd{margin:0;overflow-wrap:anywhere}
+.invoice-filters{display:grid;grid-template-columns:minmax(0,1.6fr) minmax(0,1fr) auto;align-items:end;gap:16px;margin-bottom:18px}
+.invoice-filters .field{margin:0}.transaction-summary{display:flex;flex-wrap:wrap;gap:13px 25px;padding:15px 0;border-bottom:1px solid var(--line);margin-bottom:15px}
+.receipt .row>span{overflow-wrap:anywhere;min-width:0}.stockrow{flex-wrap:wrap}.detail{min-width:100px;overflow-wrap:anywhere}
+@media(max-width:1100px){#app{grid-template-columns:195px minmax(0,1fr)}}
+@media(max-width:800px){#app{display:block}.sidebar{display:none}.workspace{margin:0}.topbar{min-height:68px}.grid,.pos,.estimate{grid-template-columns:minmax(0,1fr)}.metrics{grid-template-columns:repeat(2,minmax(0,1fr))}.invoice-filters{grid-template-columns:minmax(0,1fr)}.pagehead>.row{width:100%}.pagehead>.row .btn{flex:1}.welcome .row{flex-wrap:wrap}.invoice-filters input{min-height:46px}.bottomnav{overflow-x:auto;touch-action:auto}.bottomnav button{flex-shrink:0}.chart{gap:8px}.shop-details{grid-template-columns:1fr}.shop-details dd{margin-bottom:8px}}
+@media(max-width:380px){.metrics,.formgrid,.productgrid{grid-template-columns:minmax(0,1fr)}.main{padding-inline:12px}.topbar{padding-inline:12px}.estimate-result{padding:20px}.panel{padding:15px}dialog{padding:18px}.mobilebrand{font-size:18px}.topactions .avatar{display:none}}
+@media(max-height:480px) and (max-width:800px){.bottomnav{position:static;flex-wrap:wrap}.main{padding-bottom:25px}}
+@media print{body>dialog[open]{max-width:none;max-height:none;overflow:visible}.tablewrap{overflow:visible}.no-print{display:none!important}}
